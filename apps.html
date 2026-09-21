@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Apps — Longest Chariot</title>
+  <meta name="description" content="Explore the apps built by Longest Chariot." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-white text-slate-800">
+
+  <!-- Header / Nav -->
+  <header class="bg-slate-950 sticky top-0 z-50 shadow-lg">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 text-white font-heading font-bold text-lg">
+        <svg class="chariot-wheel w-8 h-8 text-amber-400" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="3"/>
+          <circle cx="24" cy="24" r="4" fill="currentColor"/>
+          <path d="M24 4V44M4 24H44M9.5 9.5L38.5 38.5M38.5 9.5L9.5 38.5" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        Longest Chariot
+      </a>
+
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" data-nav-link class="text-slate-200 hover:text-amber-400 font-medium transition">Home</a>
+        <a href="apps.html" data-nav-link class="text-slate-200 hover:text-amber-400 font-medium transition">Apps</a>
+        <a href="contact.html" data-nav-link class="text-slate-200 hover:text-amber-400 font-medium transition">Contact</a>
+        <a href="contact.html" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-semibold px-5 py-2 rounded-full transition">Get In Touch</a>
+      </div>
+
+      <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" class="md:hidden text-white">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+
+    <div id="mobile-menu" class="md:hidden bg-slate-950 border-t border-slate-800">
+      <div class="px-6 py-4 flex flex-col gap-4">
+        <a href="index.html" data-nav-link class="text-slate-200 hover:text-amber-400 font-medium">Home</a>
+        <a href="apps.html" data-nav-link class="text-slate-200 hover:text-amber-400 font-medium">Apps</a>
+        <a href="contact.html" data-nav-link class="text-slate-200 hover:text-amber-400 font-medium">Contact</a>
+        <a href="contact.html" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-semibold px-5 py-2 rounded-full text-center">Get In Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-slate-950 text-white relative overflow-hidden">
+    <!-- Subtle ambient background glow -->
+    <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="max-w-6xl mx-auto px-6 py-20 md:py-28 text-center relative z-10">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-amber-400/10 text-amber-400 border border-amber-400/20 mb-6">
+        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+        Portfolio &amp; Products
+      </span>
+      <h1 class="font-heading text-4xl md:text-6xl font-extrabold leading-tight tracking-tight mb-6">
+        Apps Built with <span class="text-amber-400">Purpose</span>
+      </h1>
+      <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+        From accessibility tools to culinary hubs and outdoor navigation — exploring thoughtful digital solutions crafted by our studio.
+      </p>
+
+      <!-- Quick stats bar -->
+      <div class="mt-10 pt-8 border-t border-slate-800/80 max-w-xl mx-auto grid grid-cols-3 gap-4 text-center">
+        <div>
+          <div class="text-2xl md:text-3xl font-bold text-amber-400 font-heading">5+</div>
+          <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-medium">Projects</div>
+        </div>
+        <div class="border-x border-slate-800">
+          <div class="text-2xl md:text-3xl font-bold text-amber-400 font-heading">3</div>
+          <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-medium">Live In Production</div>
+        </div>
+        <div>
+          <div class="text-2xl md:text-3xl font-bold text-amber-400 font-heading">100%</div>
+          <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-medium">Independent</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter and Search Controls -->
+  <section class="bg-slate-900 border-b border-slate-800 sticky top-[65px] z-40 shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <!-- Categories -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-1 md:pb-0 scrollbar-none" role="tablist" aria-label="App categories">
+        <button data-filter-btn="all" aria-pressed="true" class="bg-amber-400 text-slate-950 px-4 py-2 rounded-full text-xs md:text-sm font-semibold transition whitespace-nowrap shadow-sm">
+          All Apps
+        </button>
+        <button data-filter-btn="web" aria-pressed="false" class="bg-slate-800/80 hover:bg-slate-800 text-slate-300 hover:text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium transition whitespace-nowrap">
+          Web Apps
+        </button>
+        <button data-filter-btn="mobile" aria-pressed="false" class="bg-slate-800/80 hover:bg-slate-800 text-slate-300 hover:text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium transition whitespace-nowrap">
+          Mobile Apps
+        </button>
+      </div>
+
+      <!-- Search & counter -->
+      <div class="flex items-center gap-3">
+        <div class="relative w-full md:w-64">
+          <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input type="search" id="app-search" placeholder="Search apps..."
+            class="w-full bg-slate-950/80 text-white placeholder-slate-400 text-xs md:text-sm rounded-full pl-9 pr-4 py-2 border border-slate-700/80 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition" />
+        </div>
+        <span id="apps-count" class="hidden sm:inline-block text-xs text-slate-400 font-medium whitespace-nowrap">5 projects</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- App grid -->
+  <section class="py-16 md:py-24 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="grid md:grid-cols-2 gap-8" id="apps-grid">
+
+        <!-- App 1: TapToTalker -->
+        <article class="app-card bg-white border border-slate-200/80 hover:border-teal-300 rounded-2xl p-8 shadow-sm hover:shadow-xl flex flex-col justify-between"
+          data-animate data-app-card data-category="web" data-title="TapToTalker" data-desc="communication helper non-verbal speak accessibility tap">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-5">
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-teal-50 border border-teal-100 text-teal-600 flex items-center justify-center flex-shrink-0 shadow-inner">
+                  <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-2xl text-slate-900 group-hover:text-teal-600 transition">TapToTalker</h3>
+                  <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-teal-700 bg-teal-50 border border-teal-200/60 px-2.5 py-0.5 rounded-full mt-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-teal-500 pulse-dot"></span>
+                    Web App &middot; Live
+                  </span>
+                </div>
+              </div>
+            </div>
+            <p class="text-slate-600 text-base leading-relaxed mb-6">
+              A responsive AAC communication helper built for non-verbal individuals. Its clean, accessible tap-based interface enables effortless expression of needs, emotions, and everyday dialogue.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md font-medium">Accessibility (AAC)</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md font-medium">Text-to-Speech</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md font-medium">Web</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <a href="https://taptotalker.netlify.app/" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-sm font-semibold text-teal-700 hover:text-teal-800 transition group">
+              <span>Launch App</span>
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </a>
+            <span class="text-xs text-slate-400 font-medium">Free Access</span>
+          </div>
+        </article>
+
+        <!-- App 2: RecipeNepal -->
+        <article class="app-card bg-white border border-slate-200/80 hover:border-emerald-300 rounded-2xl p-8 shadow-sm hover:shadow-xl flex flex-col justify-between"
+          data-animate data-app-card data-category="web" data-title="RecipeNepal" data-desc="authentic nepali recipes dal bhat momo sel roti cooking cuisine food">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-5">
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 shadow-inner">
+                  <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-2xl text-slate-900">RecipeNepal</h3>
+                  <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-2.5 py-0.5 rounded-full mt-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 pulse-dot"></span>
+                    Web App &middot; Live
+                  </span>
+                </div>
+              </div>
+            </div>
+            <p class="text-slate-600 text-base leading-relaxed mb-6">
+              Authentic Nepali culinary traditions made accessible for kitchens worldwide. Features step-by-step guides for momo, dal bhat, sel roti, curated ingredient substitutions, and rich cultural notes.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md font-medium">Culinary</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md font-medium">Cultural Heritage</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md font-medium">Web</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <a href="https://receipenepal.com/" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 hover:text-emerald-800 transition group">
+              <span>Visit RecipeNepal</span>
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </a>
+            <span class="text-xs text-slate-400 font-medium">receipenepal.com</span>
+          </div>
+        </article>
+
+        <!-- App 3: Tom's Boat Repair -->
+        <article class="app-card bg-white border border-slate-200/80 hover:border-amber-300 rounded-2xl p-8 shadow-sm hover:shadow-xl flex flex-col justify-between"
+          data-animate data-app-card data-category="web" data-title="Tom's Boat Repair" data-desc="mobile marine mechanic service engine rebuild towing docks los angeles">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-5">
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-100 text-amber-600 flex items-center justify-center flex-shrink-0 shadow-inner">
+                  <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-2xl text-slate-900">Tom's Boat Repair</h3>
+                  <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-800 bg-amber-50 border border-amber-200/60 px-2.5 py-0.5 rounded-full mt-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-500 pulse-dot"></span>
+                    Web App &middot; Live
+                  </span>
+                </div>
+              </div>
+            </div>
+            <p class="text-slate-600 text-base leading-relaxed mb-6">
+              Premier digital portal for mobile marine mechanical services across Greater Los Angeles. Features service quotes, dockside diagnostics scheduling, engine overhaul details, and emergency support.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md font-medium">Marine Services</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md font-medium">Online Booking</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md font-medium">Local Business</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <a href="https://tomsboatrepair.com/" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-sm font-semibold text-amber-700 hover:text-amber-800 transition group">
+              <span>Visit Website</span>
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </a>
+            <span class="text-xs text-slate-400 font-medium">tomsboatrepair.com</span>
+          </div>
+        </article>
+
+        <!-- App 4: TrailKeep -->
+        <article class="app-card bg-white border border-slate-200/80 hover:border-indigo-300 rounded-2xl p-8 shadow-sm hover:shadow-xl flex flex-col justify-between"
+          data-animate data-app-card data-category="mobile" data-title="TrailKeep" data-desc="hiking companion offline maps route tracking trip logging gps outdoor mobile ios android">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-5">
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-indigo-50 border border-indigo-100 text-indigo-600 flex items-center justify-center flex-shrink-0 shadow-inner">
+                  <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-2xl text-slate-900">TrailKeep</h3>
+                  <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-700 bg-indigo-50 border border-indigo-200/60 px-2.5 py-0.5 rounded-full mt-1.5">
+                    Mobile &middot; In Development
+                  </span>
+                </div>
+              </div>
+            </div>
+            <p class="text-slate-600 text-base leading-relaxed mb-6">
+              An offline-first wilderness companion engineered for backcountry trails where cellular coverage drops. Provides topographic maps, GPX waypoint tracking, elevation profiling, and emergency logging.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md font-medium">Offline GPS</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md font-medium">iOS &amp; Android</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md font-medium">Outdoor Tech</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <a href="contact.html?project=TrailKeep"
+              class="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 hover:text-indigo-700 transition group">
+              <span>Inquire for Beta Access</span>
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </a>
+            <span class="text-xs text-slate-400 font-medium">Beta testing</span>
+          </div>
+        </article>
+
+        <!-- App 5: Roundtable -->
+        <article class="app-card bg-white border border-slate-200/80 hover:border-rose-300 rounded-2xl p-8 shadow-sm hover:shadow-xl flex flex-col justify-between"
+          data-animate data-app-card data-category="web" data-title="Roundtable" data-desc="meeting notes action items collaboration workspace reminders web">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-5">
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-rose-50 border border-rose-100 text-rose-600 flex items-center justify-center flex-shrink-0 shadow-inner">
+                  <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m5-1.13a4 4 0 100-8 4 4 0 000 8zm6-2a4 4 0 10-8 0"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-2xl text-slate-900">Roundtable</h3>
+                  <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-rose-700 bg-rose-50 border border-rose-200/60 px-2.5 py-0.5 rounded-full mt-1.5">
+                    Web App &middot; Preview
+                  </span>
+                </div>
+              </div>
+            </div>
+            <p class="text-slate-600 text-base leading-relaxed mb-6">
+              Streamlined team alignment software bringing agenda collaboration, living minutes, and automated action-item follow-ups into a unified canvas so team commitments never get lost.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md font-medium">Productivity</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md font-medium">Collaboration</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md font-medium">SaaS</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <a href="contact.html?project=Roundtable"
+              class="inline-flex items-center gap-2 text-sm font-semibold text-rose-600 hover:text-rose-700 transition group">
+              <span>Request Early Preview</span>
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </a>
+            <span class="text-xs text-slate-400 font-medium">Private Alpha</span>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Filter Empty State -->
+      <div id="apps-empty-state" class="hidden text-center py-16 bg-white border border-slate-200 rounded-2xl p-8 max-w-md mx-auto my-8">
+        <div class="w-12 h-12 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-3">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h4 class="font-heading font-semibold text-lg text-slate-800 mb-1">No matching apps found</h4>
+        <p class="text-slate-500 text-sm">Try clearing your search query or selecting a different category filter.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-slate-900 text-white py-20 md:py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(251,191,36,0.08),transparent_50%)] pointer-events-none"></div>
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10" data-animate>
+      <span class="inline-block text-amber-400 text-xs font-semibold uppercase tracking-wider mb-3">Collaborate With Us</span>
+      <h2 class="font-heading text-3xl md:text-5xl font-extrabold mb-4">Want to build the next one with us?</h2>
+      <p class="text-slate-300 text-lg md:text-xl max-w-xl mx-auto mb-8 leading-relaxed">
+        Whether you have an early product concept or need specialized engineering execution, let's bring it to life.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="contact.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold px-8 py-3.5 rounded-full shadow-lg hover:shadow-amber-400/20 transition">
+          <span>Start a Conversation</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+        <a href="contact.html" class="w-full sm:w-auto inline-block border border-slate-700 hover:border-slate-500 text-slate-300 hover:text-white font-medium px-8 py-3.5 rounded-full transition">
+          Ask Questions
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400">
+    <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-2 text-white font-heading font-semibold">
+        <svg class="w-6 h-6 text-amber-400" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="3"/>
+          <circle cx="24" cy="24" r="4" fill="currentColor"/>
+        </svg>
+        Longest Chariot
+      </a>
+      <div class="flex flex-wrap items-center gap-6 text-sm">
+        <a href="index.html" class="hover:text-amber-400 transition">Home</a>
+        <a href="apps.html" class="hover:text-amber-400 transition">Apps</a>
+        <a href="contact.html" class="hover:text-amber-400 transition">Contact</a>
+        <a href="mailto:contact@longestchariot.com" class="hover:text-amber-400 transition">contact@longestchariot.com</a>
+        <a href="mailto:help@longestchariot.com" class="hover:text-amber-400 transition">help@longestchariot.com</a>
+      </div>
+      <p class="text-sm">&copy; <span id="footer-year"></span> Longest Chariot. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
