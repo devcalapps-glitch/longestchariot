@@ -33,6 +33,7 @@ Official website and product showcase for **Longest Chariot**, an independent pr
 
 ```text
 .
+├── index.html       # Studio homepage & capabilities
 ├── apps.html        # Apps portfolio page with filters & search
 ├── contact.html     # Contact and inquiry form with validation
 ├── css/
@@ -44,7 +45,7 @@ Official website and product showcase for **Longest Chariot**, an independent pr
 
 ---
 
-## 🚀 Local Development
+## 🚀 Local Development & Deployment
 
 You can serve the static files with any local HTTP server:
 
@@ -56,7 +57,9 @@ python3 -m http.server 8000
 npx serve .
 ```
 
-Then visit `http://localhost:8000/apps.html` in your browser.
+Then visit `http://localhost:8000/` in your browser.
+
+Ready to deploy on **Cloudflare Pages**, **Netlify**, or **Vercel** with zero build configuration (output directory is the repository root `.`).
 
 ---
 
