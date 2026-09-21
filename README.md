@@ -33,33 +33,30 @@ Official website and product showcase for **Longest Chariot**, an independent pr
 
 ```text
 .
-├── index.html       # Studio homepage & capabilities
-├── apps.html        # Apps portfolio page with filters & search
-├── contact.html     # Contact and inquiry form with validation
+├── index.html                  # Studio homepage & capabilities
+├── apps.html                   # Apps portfolio page with filters & search
+├── contact.html                # Contact and inquiry form with validation
+├── functions/
+│   └── api/
+│       └── contact.js          # Cloudflare Pages Function (Email Routing dispatcher)
 ├── css/
-│   └── style.css    # Custom typography, wheel animations, card transitions
+│   └── style.css               # Custom typography, wheel animations, card transitions
 ├── js/
-│   └── main.js      # Filter engine, scroll reveal, mobile nav, form logic
-└── .gitignore       # Git ignore rules
+│   └── main.js                 # Filter engine, scroll reveal, mobile nav, form submission
+└── .gitignore                  # Git ignore rules
 ```
 
 ---
 
-## 🚀 Local Development & Deployment
+## 🚀 Deployment & Cloudflare Setup
 
-You can serve the static files with any local HTTP server:
+Deploy on **Cloudflare Pages** with zero build configuration:
+- **Build command**: *(leave empty)*
+- **Build output directory**: `/`
 
-```bash
-# Python 3
-python3 -m http.server 8000
-
-# or Node.js npx
-npx serve .
-```
-
-Then visit `http://localhost:8000/` in your browser.
-
-Ready to deploy on **Cloudflare Pages**, **Netlify**, or **Vercel** with zero build configuration (output directory is the repository root `.`).
+### 📧 Email Routing Integration:
+Submissions to the contact form are dispatched through `functions/api/contact.js` directly to your official email via Cloudflare Email Routing.
+- Optional: In **Cloudflare Pages** > **Settings** > **Functions**, you can add a **Send Email** binding named `CONTACT_EMAIL` pointing to your domain's email router.
 
 ---
 

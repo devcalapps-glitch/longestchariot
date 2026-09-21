@@ -54,12 +54,12 @@ function setFooterYear() {
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 }
 
-// Contact form: client-side validation, then submit to Formspree
+// Contact form: client-side validation, then submit to /api/contact (Cloudflare Email Routing)
 function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
 
-  const FORM_ENDPOINT = 'https://formspree.io/f/xaeyyrln';
+  const FORM_ENDPOINT = '/api/contact';
   const status = document.getElementById('form-status');
   const submitButton = form.querySelector('button[type="submit"]');
   const fields = ['name', 'email', 'subject', 'message'];
@@ -70,7 +70,6 @@ function initContactForm() {
   if (projectParam && form.subject) {
     form.subject.value = `Inquiry regarding ${projectParam}`;
   }
-
 
   function showError(field, message) {
     const errorEl = document.getElementById(`${field}-error`);
@@ -163,7 +162,7 @@ function initContactForm() {
       }
     } catch (error) {
       if (status) {
-        status.textContent = 'Something went wrong sending your message. Please try again in a moment.';
+        status.textContent = 'Something went wrong sending your message. Please email contact@longestchariot.com directly.';
         status.className = 'text-sm font-medium text-red-600 mt-4';
       }
     } finally {
