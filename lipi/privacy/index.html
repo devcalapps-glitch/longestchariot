@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy Policy – Lipi: Scan &amp; Translate | Longest Chariot LLC</title>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#0268B5;--on-primary:#FFFFFF;--secondary:#F4EFFF;--on-secondary:#0268B5;--link:#0268B5;
+  --bg:#F8F9FA;--surface:#FFFFFF;--text:#111827;--muted:#4B5563;--border:#E5E7EB;
+  --success:#057A55;--success-bg:#ECFDF5;--info-bg:#EFF6FF;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --secondary:#232047;--on-secondary:#A9D4F7;--link:#6DB6F0;--bg:#0B1220;--surface:#131C2E;--text:#F3F4F6;--muted:#9CA3AF;--border:#26324A;
+    --success:#34D399;--success-bg:#064E3B;--info-bg:#1E293B;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --secondary:#232047;--on-secondary:#A9D4F7;--link:#6DB6F0;--bg:#0B1220;--surface:#131C2E;--text:#F3F4F6;--muted:#9CA3AF;--border:#26324A;
+  --success:#34D399;--success-bg:#064E3B;--info-bg:#1E293B;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Mukta','Noto Sans Devanagari',system-ui,-apple-system,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-tap-highlight-color:transparent;
+}
+button,a{font:inherit;color:inherit}
+button{cursor:pointer}
+button:focus-visible,a:focus-visible{outline:3px solid var(--link);outline-offset:2px}
+.wrap{max-width:820px;margin:0 auto;padding:24px 20px 72px}
+.topbar{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding-bottom:18px;
+  border-bottom:1px solid var(--border);
+  margin-bottom:24px;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{
+  width:44px;height:44px;border-radius:14px;
+  background:var(--primary);color:var(--on-primary);
+  display:grid;place-items:center;
+  font-weight:800;font-size:22px;flex:none;
+}
+.brand-text b{display:block;font-size:20px;line-height:1.2}
+.brand-text span{font-size:13px;color:var(--muted)}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.seg{display:inline-flex;background:var(--secondary);border-radius:12px;padding:3px;gap:3px}
+.seg button{
+  border:0;background:transparent;border-radius:9px;
+  padding:5px 12px;font-weight:600;font-size:14px;color:var(--on-secondary);min-height:34px;
+}
+.seg button[aria-pressed="true"]{background:var(--primary);color:var(--on-primary)}
+.btn{
+  border:1px solid var(--border);background:var(--surface);
+  border-radius:10px;padding:5px 12px;font-weight:600;font-size:14px;min-height:36px;
+}
+.hero-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:22px;padding:24px;margin-bottom:20px;
+}
+.hero-card h1{margin:0 0 8px;font-size:32px;line-height:1.2;font-weight:800}
+.meta-row{display:flex;flex-wrap:wrap;gap:10px 18px;font-size:14px;color:var(--muted);margin-bottom:16px}
+.pill-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:16px}
+.stat-box{
+  background:var(--bg);border:1px solid var(--border);
+  border-radius:16px;padding:14px 16px;
+}
+.stat-box .tag{
+  display:inline-block;font-size:12px;font-weight:700;
+  padding:2px 9px;border-radius:999px;margin-bottom:6px;
+  background:var(--success-bg);color:var(--success);
+}
+.stat-box b{display:block;font-size:16px;margin-bottom:2px}
+.stat-box span{font-size:14px;color:var(--muted)}
+.card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:20px;padding:22px 24px;margin-bottom:16px;
+}
+.card h2{margin:0 0 10px;font-size:21px;font-weight:700;color:var(--text)}
+.card p{margin:0 0 12px}
+.card p:last-child{margin-bottom:0}
+.card ul{margin:8px 0 0;padding-left:20px}
+.card li{margin-bottom:8px}
+.table-wrap{overflow-x:auto;margin-top:12px}
+table{width:100%;border-collapse:collapse;font-size:14px;text-align:left}
+th,td{padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+th{font-weight:700;background:var(--bg);color:var(--text)}
+a{color:var(--link);font-weight:600;text-decoration:underline}
+.footer{
+  text-align:center;color:var(--muted);font-size:14px;
+  margin-top:28px;padding-top:18px;border-top:1px solid var(--border);
+}
+.toast{
+  position:fixed;left:50%;bottom:24px;transform:translate(-50%,0);
+  background:var(--text);color:var(--bg);padding:10px 18px;
+  border-radius:999px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .2s;z-index:20;
+}
+.toast.show{opacity:1}
+@media print{
+  .controls,.toast{display:none!important}
+  body{background:#fff;color:#000}
+  .card,.hero-card{break-inside:avoid;border-color:#ccc}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">अ</div>
+      <div class="brand-text">
+        <b data-i="appTitle">Lipi – Scan &amp; Translate</b>
+        <span data-i="orgSub">Longest Chariot LLC · Package ID: com.longestchariot.lipi</span>
+      </div>
+    </div>
+    <div class="controls">
+      <div class="seg" id="langSeg" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">English</button>
+        <button type="button" data-lang="ne" aria-pressed="false">नेपाली</button>
+      </div>
+      <div class="seg" id="themeSeg" role="group" aria-label="Theme">
+        <button type="button" data-theme="system" aria-pressed="true" data-i="tSys">System</button>
+        <button type="button" data-theme="light" aria-pressed="false" data-i="tLight">Light</button>
+        <button type="button" data-theme="dark" aria-pressed="false" data-i="tDark">Dark</button>
+      </div>
+      <button type="button" class="btn" id="copyUrlBtn" data-i="copyBtn">Copy Policy Text</button>
+      <button type="button" class="btn" id="printBtn" data-i="printBtn">Print / PDF</button>
+    </div>
+  </header>
+
+  <section class="hero-card">
+    <h1 data-i="h1">Privacy Policy</h1>
+    <div class="meta-row">
+      <span data-i="effDate">Effective Date: November 12, 2026</span>
+      <span>•</span>
+      <span data-i="entity">Developer: Longest Chariot LLC (Gilbert, Arizona, USA)</span>
+      <span>•</span>
+      <span><a href="mailto:contact@longestchariot.com">contact@longestchariot.com</a></span>
+    </div>
+    <p data-i="intro">
+      Longest Chariot LLC ("we", "our", or "us") built the Lipi – Scan &amp; Translate mobile and web application (Android package ID: com.longestchariot.lipi) as a privacy-first Devanagari and English document scanner and translator. This Privacy Policy explains how information is handled on your device and discloses third-party SDK telemetry required by Google Play's Data Safety section.
+    </p>
+    <div class="pill-row">
+      <div class="stat-box">
+        <span class="tag" data-i="b1Tag">100% On-Device OCR</span>
+        <b data-i="b1Title">Photos Never Uploaded</b>
+        <span data-i="b1Sub">Camera images and PDFs are read locally on your phone via Google ML Kit Text Recognition v2.</span>
+      </div>
+      <div class="stat-box">
+        <span class="tag" data-i="b2Tag">Local Storage Only</span>
+        <b data-i="b2Title">On-Device Scan History</b>
+        <span data-i="b2Sub">Saved scans stay in your device's local IndexedDB database and can be cleared anytime.</span>
+      </div>
+      <div class="stat-box">
+        <span class="tag" data-i="b3Tag">Zero Ad Tracking</span>
+        <b data-i="b3Title">No Data Sold or Shared</b>
+        <span data-i="b3Sub">No user accounts, no advertising IDs, and no third-party data sharing.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2 data-i="s1Title">1. Camera, Photos, and Document Files (Processed On-Device Only)</h2>
+    <p data-i="s1P1">
+      Lipi requests access to your device camera (android.permission.CAMERA) and selected media/document files solely when you tap "Take photo" or "Upload file" to scan a document.
+    </p>
+    <ul>
+      <li data-i="s1L1">All optical character recognition (OCR) for Devanagari (Nepali) and Latin (English) scripts runs locally on your device using Google ML Kit Text Recognition v2 (or in-browser WebAssembly OCR when used in a web browser).</li>
+      <li data-i="s1L2">Your raw photos, camera frames, and PDF files are never uploaded to Longest Chariot LLC servers or shared with third parties.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2 data-i="s2Title">2. Extracted Text &amp; Translation Requests</h2>
+    <p data-i="s2P1">
+      After text is extracted on your device, Lipi sends only the plain extracted text string over encrypted HTTPS (TLS) to an online translation service (Google Translate API endpoint or MyMemory Translation fallback) to return your Nepali or English translation in real time.
+    </p>
+    <ul>
+      <li data-i="s2L1">Longest Chariot LLC does not log, store, or inspect the text you translate on any company server.</li>
+      <li data-i="s2L2">You can edit the extracted text on your screen prior to re-translating, and we recommend exercising caution before translating confidential personal, medical, or financial records.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2 data-i="s3Title">3. Google Play Data Safety &amp; ML Kit Android SDK Disclosure</h2>
+    <p data-i="s3P1">
+      While Longest Chariot LLC does not operate backend analytics or collect personal data, the bundled Google ML Kit Android SDK (com.google.mlkit:text-recognition-devanagari) automatically collects limited diagnostic and device telemetry encrypted in transit via HTTPS to maintain ML model reliability:
+    </p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th data-i="thType">Data Category (Google Play Data Safety)</th>
+            <th data-i="thDetail">Specific Data Handled</th>
+            <th data-i="thPurpose">Handling &amp; Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b data-i="td1Type">Photos &amp; Videos / Files</b></td>
+            <td data-i="td1Det">Camera captures, gallery images, and PDF pages selected by the user</td>
+            <td data-i="td1Purp">Processed strictly on-device. Not collected or transmitted off-device.</td>
+          </tr>
+          <tr>
+            <td><b data-i="td2Type">App Info &amp; Performance (Diagnostics &amp; Crash Logs)</b></td>
+            <td data-i="td2Det">OCR processing latency, image resolution configuration, feature version, event types, and error codes</td>
+            <td data-i="td2Purp">Collected automatically by Google ML Kit SDK over HTTPS for App Functionality and Analytics. Not shared with third parties.</td>
+          </tr>
+          <tr>
+            <td><b data-i="td3Type">Device or Other IDs</b></td>
+            <td data-i="td3Det">Per-installation identifiers (not uniquely tied to your identity), device model, and OS build</td>
+            <td data-i="td3Purp">Collected automatically by Google ML Kit SDK over HTTPS for SDK diagnostics and usage analytics. Not shared with third parties.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2 data-i="s4Title">4. Local Storage, Data Retention, and Deletion Controls</h2>
+    <p data-i="s4P1">
+      When "Auto-save to History" is enabled or when you tap "Save to History", Lipi stores the document thumbnail, extracted text, and translated text locally on your device inside your browser/WebView IndexedDB database (lipi_db) and stores your UI preferences (theme, language, default translation direction) in localStorage.
+    </p>
+    <ul>
+      <li data-i="s4L1">Delete Single Scan: Open the History tab and tap the "×" button next to any saved item to delete it immediately from your device.</li>
+      <li data-i="s4L2">Delete All History: Open the Settings tab, tap "Delete" next to Clear History, and confirm in the slide-up sheet to wipe all IndexedDB records permanently.</li>
+      <li data-i="s4L3">Uninstalling the Lipi Android app also removes all local IndexedDB and WebView storage from your device.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2 data-i="s5Title">5. Children's Privacy &amp; Policy Updates</h2>
+    <p data-i="s5P1">
+      Lipi does not require user registration and does not knowingly collect personal information from children under 13 (or the applicable age in your jurisdiction). If we update this Privacy Policy, we will post the revised version with an updated effective date on this page and inside the app.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2 data-i="s6Title">6. Contact Us</h2>
+    <p data-i="s6P1">
+      If you have questions about this Privacy Policy or data practices for Lipi – Scan &amp; Translate, please contact Longest Chariot LLC:
+    </p>
+    <ul>
+      <li><b data-i="cOrgLbl">Company:</b> Longest Chariot LLC (Gilbert, Arizona, United States)</li>
+      <li><b data-i="cEmailLbl">Support &amp; Privacy Email:</b> <a href="mailto:contact@longestchariot.com">contact@longestchariot.com</a></li>
+      <li><b data-i="cWebLbl">Website:</b> <a href="https://longestchariot.com" target="_blank" rel="noopener">https://longestchariot.com</a></li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    © 2026 Longest Chariot LLC · Lipi – Scan &amp; Translate (com.longestchariot.lipi)
+  </footer>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+var I18N={
+  en:{
+    appTitle:"Lipi – Scan & Translate",
+    orgSub:"Longest Chariot LLC · Package ID: com.longestchariot.lipi",
+    tSys:"System",tLight:"Light",tDark:"Dark",
+    copyBtn:"Copy Policy Text",printBtn:"Print / PDF",copied:"Privacy Policy copied to clipboard",
+    h1:"Privacy Policy",
+    effDate:"Effective Date: November 12, 2026",
+    entity:"Developer: Longest Chariot LLC (Gilbert, Arizona, USA)",
+    intro:"Longest Chariot LLC (\"we\", \"our\", or \"us\") built the Lipi – Scan & Translate mobile and web application (Android package ID: com.longestchariot.lipi) as a privacy-first Devanagari and English document scanner and translator. This Privacy Policy explains how information is handled on your device and discloses third-party SDK telemetry required by Google Play's Data Safety section.",
+    b1Tag:"100% On-Device OCR",b1Title:"Photos Never Uploaded",b1Sub:"Camera images and PDFs are read locally on your phone via Google ML Kit Text Recognition v2.",
+    b2Tag:"Local Storage Only",b2Title:"On-Device Scan History",b2Sub:"Saved scans stay in your device's local IndexedDB database and can be cleared anytime.",
+    b3Tag:"Zero Ad Tracking",b3Title:"No Data Sold or Shared",b3Sub:"No user accounts, no advertising IDs, and no third-party data sharing.",
+    s1Title:"1. Camera, Photos, and Document Files (Processed On-Device Only)",
+    s1P1:"Lipi requests access to your device camera (android.permission.CAMERA) and selected media/document files solely when you tap \"Take photo\" or \"Upload file\" to scan a document.",
+    s1L1:"All optical character recognition (OCR) for Devanagari (Nepali) and Latin (English) scripts runs locally on your device using Google ML Kit Text Recognition v2 (or in-browser WebAssembly OCR when used in a web browser).",
+    s1L2:"Your raw photos, camera frames, and PDF files are never uploaded to Longest Chariot LLC servers or shared with third parties.",
+    s2Title:"2. Extracted Text & Translation Requests",
+    s2P1:"After text is extracted on your device, Lipi sends only the plain extracted text string over encrypted HTTPS (TLS) to an online translation service (Google Translate API endpoint or MyMemory Translation fallback) to return your Nepali or English translation in real time.",
+    s2L1:"Longest Chariot LLC does not log, store, or inspect the text you translate on any company server.",
+    s2L2:"You can edit the extracted text on your screen prior to re-translating, and we recommend exercising caution before translating confidential personal, medical, or financial records.",
+    s3Title:"3. Google Play Data Safety & ML Kit Android SDK Disclosure",
+    s3P1:"While Longest Chariot LLC does not operate backend analytics or collect personal data, the bundled Google ML Kit Android SDK (com.google.mlkit:text-recognition-devanagari) automatically collects limited diagnostic and device telemetry encrypted in transit via HTTPS to maintain ML model reliability:",
+    thType:"Data Category (Google Play Data Safety)",thDetail:"Specific Data Handled",thPurpose:"Handling & Purpose",
+    td1Type:"Photos & Videos / Files",td1Det:"Camera captures, gallery images, and PDF pages selected by the user",td1Purp:"Processed strictly on-device. Not collected or transmitted off-device.",
+    td2Type:"App Info & Performance (Diagnostics & Crash Logs)",td2Det:"OCR processing latency, image resolution configuration, feature version, event types, and error codes",td2Purp:"Collected automatically by Google ML Kit SDK over HTTPS for App Functionality and Analytics. Not shared with third parties.",
+    td3Type:"Device or Other IDs",td3Det:"Per-installation identifiers (not uniquely tied to your identity), device model, and OS build",td3Purp:"Collected automatically by Google ML Kit SDK over HTTPS for SDK diagnostics and usage analytics. Not shared with third parties.",
+    s4Title:"4. Local Storage, Data Retention, and Deletion Controls",
+    s4P1:"When \"Auto-save to History\" is enabled or when you tap \"Save to History\", Lipi stores the document thumbnail, extracted text, and translated text locally on your device inside your browser/WebView IndexedDB database (lipi_db) and stores your UI preferences (theme, language, default translation direction) in localStorage.",
+    s4L1:"Delete Single Scan: Open the History tab and tap the \"×\" button next to any saved item to delete it immediately from your device.",
+    s4L2:"Delete All History: Open the Settings tab, tap \"Delete\" next to Clear History, and confirm in the slide-up sheet to wipe all IndexedDB records permanently.",
+    s4L3:"Uninstalling the Lipi Android app also removes all local IndexedDB and WebView storage from your device.",
+    s5Title:"5. Children's Privacy & Policy Updates",
+    s5P1:"Lipi does not require user registration and does not knowingly collect personal information from children under 13 (or the applicable age in your jurisdiction). If we update this Privacy Policy, we will post the revised version with an updated effective date on this page and inside the app.",
+    s6Title:"6. Contact Us",
+    s6P1:"If you have questions about this Privacy Policy or data practices for Lipi – Scan & Translate, please contact Longest Chariot LLC:",
+    cOrgLbl:"Company:",cEmailLbl:"Support & Privacy Email:",cWebLbl:"Website:"
+  },
+  ne:{
+    appTitle:"लिपि (Lipi) – स्क्यान र अनुवाद",
+    orgSub:"Longest Chariot LLC · प्याकेज ID: com.longestchariot.lipi",
+    tSys:"प्रणाली",tLight:"उज्यालो",tDark:"अँध्यारो",
+    copyBtn:"नीति प्रतिलिपि गर्नुहोस्",printBtn:"प्रिन्ट / PDF",copied:"गोपनीयता नीति प्रतिलिपि गरियो",
+    h1:"गोपनीयता नीति (Privacy Policy)",
+    effDate:"लागू मिति: नोभेम्बर १२, २०२६",
+    entity:"निर्माता: Longest Chariot LLC (गिल्बर्ट, एरिजोना, अमेरिका)",
+    intro:"Longest Chariot LLC ले देवनागरी (नेपाली) र अंग्रेजी कागजातहरू स्क्यान तथा अनुवाद गर्नका लागि 'Lipi – Scan & Translate' (Android प्याकेज: com.longestchariot.lipi) निर्माण गरेको हो। यो गोपनीयता नीतिले तपाईंको उपकरणमा डाटा कसरी सुरक्षित रहन्छ र Google Play Data Safety अन्तर्गतका विवरणहरू स्पष्ट पार्छ।",
+    b1Tag:"१००% अन-डिभाइस OCR",b1Title:"तस्बिर कतै अपलोड हुँदैन",b1Sub:"क्यामेराका फोटो र PDF हरू Google ML Kit v2 मार्फत तपाईंको फोनमै अफलाइन पढिन्छन्।",
+    b2Tag:"स्थानीय भण्डारण मात्र",b2Title:"उपकरणमै सुरक्षित इतिहास",b2Sub:"सुरक्षित गरिएका स्क्यानहरू तपाईंको फोनको IndexedDB मा मात्र रहन्छन् र जहिले पनि मेटाउन सकिन्छ।",
+    b3Tag:"विज्ञापन ट्र्याकिङ छैन",b3Title:"डाटा बिक्री वा सेयर हुँदैन",b3Sub:"कुनै खाता आवश्यक पर्दैन र तेस्रो पक्षलाई डाटा बेचिने वा बाँडिने गरिँदैन।",
+    s1Title:"१. क्यामेरा, तस्बिर र कागजात फाइलहरू (उपकरणमै मात्र प्रशोधन)",
+    s1P1:"तपाईंले 'फोटो खिच्नुहोस्' वा 'फाइल अपलोड गर्नुहोस्' थिच्दा मात्र Lipi ले क्यामेरा (android.permission.CAMERA) र फाइल छनोटको अनुमति माग्छ।",
+    s1L1:"देवनागरी र अंग्रेजी अक्षर पहिचान (OCR) पूर्ण रूपमा तपाईंको फोनभित्रै Google ML Kit Text Recognition v2 मार्फत सम्पन्न हुन्छ।",
+    s1L2:"तपाईंको मूल फोटो वा PDF फाइल Longest Chariot LLC वा अन्य कुनै बाह्य सर्भरमा कहिल्यै अपलोड हुँदैन।",
+    s2Title:"२. निकालिएको पाठ र अनुवाद सेवा",
+    s2P1:"तस्बिरबाट पाठ निकालिसकेपछि, अनुवादका लागि उक्त सादा पाठ (text) मात्र सुरक्षित HTTPS (TLS) मार्फत अनलाइन अनुवाद सेवा (Google Translate वा MyMemory) मा पठाइन्छ।",
+    s2L1:"Longest Chariot LLC ले तपाईंले अनुवाद गर्नुभएको पाठ आफ्नो कुनै सर्भरमा संकलन वा भण्डारण गर्दैन।",
+    s2L2:"अति संवेदनशील व्यक्तिगत, स्वास्थ्य वा वित्तीय कागजातहरू अनुवाद गर्नुअघि ध्यान दिन अनुरोध गरिन्छ।",
+    s3Title:"३. Google Play Data Safety र ML Kit SDK विवरण",
+    s3P1:"Longest Chariot LLC ले कुनै व्यक्तिगत डाटा संकलन नगरे तापनि, एपमा प्रयोग भएको Google ML Kit Android SDK (com.google.mlkit:text-recognition-devanagari) ले सेवाको गुणस्तर र प्राविधिक परीक्षणका लागि निम्न सीमित प्राविधिक विवरण HTTPS मार्फत संकलन गर्छ:",
+    thType:"डाटा प्रकार (Google Play Data Safety)",thDetail:"विवरण",thPurpose:"प्रयोग र उद्देश्य",
+    td1Type:"फोटो र फाइलहरू (Photos & Files)",td1Det:"प्रयोगकर्ताले छानेका फोटो र PDF पृष्ठहरू",td1Purp:"उपकरणभित्रै मात्र प्रशोधन गरिन्छ। बाहिर पठाइँदैन वा संकलन गरिँदैन।",
+    td2Type:"एप कार्यसम्पादन र डाइग्नोस्टिक्स (Diagnostics)",td2Det:"OCR गति, तस्बिर रिजोल्युसन कन्फिगरेसन, फिचर संस्करण र त्रुटि कोडहरू",td2Purp:"Google ML Kit SDK द्वारा एप कार्यक्षमता र प्राविधिक विश्लेषणका लागि HTTPS मार्फत संकलन गरिन्छ। तेस्रो पक्षलाई बाँडिँदैन।",
+    td3Type:"उपकरण वा इन्स्टलेसन पहिचान (Device/Installation IDs)",td3Det:"व्यक्तिगत पहिचान नखुल्ने प्रति-इन्स्टलेसन आइडी र उपकरण मोडेल",td3Purp:"Google ML Kit SDK द्वारा प्राविधिक विश्लेषणका लागि संकलन गरिन्छ। तेस्रो पक्षलाई बाँडिँदैन।",
+    s4Title:"४. स्थानीय भण्डारण र डाटा मेटाउने तरिका",
+    s4P1:"तपाईंको स्क्यान इतिहास तपाईंको उपकरणको IndexedDB (lipi_db) मा मात्र सुरक्षित रहन्छ र सेटिङहरू localStorage मा रहन्छन्।",
+    s4L1:"एकल स्क्यान मेटाउन: 'इतिहास' (History) ट्याबमा गई जुनसुकै नतिजाको छेउमा रहेको '×' बटन थिच्नुहोस्।",
+    s4L2:"सबै इतिहास मेटाउन: 'सेटिङ' (Settings) ट्याबमा गई 'इतिहास मेटाउनुहोस्' थिचेर पुष्टि गर्नुहोस्।",
+    s4L3:"एप अनइन्स्टल गर्दा पनि उपकरणमा रहेका सबै IndexedDB रेकर्डहरू स्वतः हट्छन्।",
+    s5Title:"५. बालबालिकाको गोपनीयता र नीति परिमार्जन",
+    s5P1:"Lipi मा कुनै प्रयोगकर्ता खाता खोल्नु पर्दैन र १३ वर्षभन्दा मुनिका बालबालिकाबाट कुनै व्यक्तिगत विवरण संकलन गरिँदैन। नीतिमा कुनै परिवर्तन भएमा यही पृष्ठ र एपमा अद्यावधिक गरिनेछ।",
+    s6Title:"६. सम्पर्क विवरण",
+    s6P1:"यस गोपनीयता नीति सम्बन्धी कुनै जिज्ञासा भएमा Longest Chariot LLC लाई सम्पर्क गर्नुहोस्:",
+    cOrgLbl:"कम्पनी:",cEmailLbl:"इमेल:",cWebLbl:"वेबसाइट:"
+  }
+};
+
+var curLang="en", curTheme="system";
+function $(id){return document.getElementById(id)}
+
+function renderLang(lang){
+  curLang=lang;
+  document.documentElement.lang=lang;
+  var dict=I18N[lang]||I18N.en;
+  document.querySelectorAll("[data-i]").forEach(function(el){
+    var k=el.getAttribute("data-i");
+    if(dict[k])el.textContent=dict[k];
+  });
+  document.querySelectorAll("#langSeg button").forEach(function(b){
+    b.setAttribute("aria-pressed",String(b.getAttribute("data-lang")===lang));
+  });
+}
+
+function renderTheme(th){
+  curTheme=th;
+  if(th==="system")document.documentElement.removeAttribute("data-theme");
+  else document.documentElement.setAttribute("data-theme",th);
+  document.querySelectorAll("#themeSeg button").forEach(function(b){
+    b.setAttribute("aria-pressed",String(b.getAttribute("data-theme")===th));
+  });
+}
+
+function showToast(msg){
+  var t=$("toast");
+  t.textContent=msg;
+  t.classList.add("show");
+  clearTimeout(showToast.tid);
+  showToast.tid=setTimeout(function(){t.classList.remove("show")},1800);
+}
+
+$("langSeg").addEventListener("click",function(e){
+  var l=e.target.getAttribute("data-lang");
+  if(l)renderLang(l);
+});
+
+$("themeSeg").addEventListener("click",function(e){
+  var t=e.target.getAttribute("data-theme");
+  if(t)renderTheme(t);
+});
+
+$("copyUrlBtn").addEventListener("click",function(){
+  var text=document.querySelector(".wrap").innerText;
+  var msg=(I18N[curLang]||I18N.en).copied;
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(function(){showToast(msg)},function(){fallbackCopy(text,msg)});
+  }else{
+    fallbackCopy(text,msg);
+  }
+});
+
+function fallbackCopy(text,msg){
+  var ta=document.createElement("textarea");
+  ta.value=text;
+  document.body.appendChild(ta);
+  ta.select();
+  try{document.execCommand("copy");showToast(msg)}catch(e){}
+  ta.remove();
+}
+
+$("printBtn").addEventListener("click",function(){
+  window.print();
+});
+</script>
+</body>
+</html>
