@@ -145,14 +145,14 @@ a{color:var(--link);font-weight:600;text-decoration:underline}
   <section class="hero-card">
     <h1 data-i="h1">Privacy Policy</h1>
     <div class="meta-row">
-      <span data-i="effDate">Effective Date: November 12, 2026</span>
+      <span data-i="effDate">Effective Date: November 13, 2026</span>
       <span>•</span>
       <span data-i="entity">Developer: Longest Chariot LLC (Gilbert, Arizona, USA)</span>
       <span>•</span>
       <span><a href="mailto:contact@longestchariot.com">contact@longestchariot.com</a></span>
     </div>
     <p data-i="intro">
-      Longest Chariot LLC ("we", "our", or "us") built the Lipi – Scan &amp; Translate mobile and web application (Android package ID: com.longestchariot.lipi) as a privacy-first Devanagari and English document scanner and translator. This Privacy Policy explains how information is handled on your device and discloses third-party SDK telemetry required by Google Play's Data Safety section.
+      Longest Chariot LLC ("we", "our", or "us") built the Lipi – Scan &amp; Translate mobile and web application (Android package ID: com.longestchariot.lipi) as a Devanagari and English document scanner and translator. This Privacy Policy explains how information is handled on your device, what is sent to third-party services (translation providers, Google ML Kit, and Google AdMob advertising), and the choices you have.
     </p>
     <div class="pill-row">
       <div class="stat-box">
@@ -166,9 +166,9 @@ a{color:var(--link);font-weight:600;text-decoration:underline}
         <span data-i="b2Sub">Saved scans stay in your device's local IndexedDB database and can be cleared anytime.</span>
       </div>
       <div class="stat-box">
-        <span class="tag" data-i="b3Tag">Zero Ad Tracking</span>
-        <b data-i="b3Title">No Data Sold or Shared</b>
-        <span data-i="b3Sub">No user accounts, no advertising IDs, and no third-party data sharing.</span>
+        <span class="tag" data-i="b3Tag">Ad-Supported</span>
+        <b data-i="b3Title">Ads by Google AdMob</b>
+        <span data-i="b3Sub">No user accounts. Ads are served by Google AdMob, which uses your Advertising ID. You can opt out of personalized ads anytime.</span>
       </div>
     </div>
   </section>
@@ -187,7 +187,7 @@ a{color:var(--link);font-weight:600;text-decoration:underline}
   <section class="card">
     <h2 data-i="s2Title">2. Extracted Text &amp; Translation Requests</h2>
     <p data-i="s2P1">
-      After text is extracted on your device, Lipi sends only the plain extracted text string over encrypted HTTPS (TLS) to an online translation service (Google Translate API endpoint or MyMemory Translation fallback) to return your Nepali or English translation in real time.
+      After text is extracted on your device, Lipi sends only the plain extracted text string over encrypted HTTPS (TLS) to a third-party online translation service (Google Translate or the MyMemory translation fallback) to return your Nepali or English translation in real time. This text is shared with that translation provider and is processed under its own privacy policy.
     </p>
     <ul>
       <li data-i="s2L1">Longest Chariot LLC does not log, store, or inspect the text you translate on any company server.</li>
@@ -198,7 +198,7 @@ a{color:var(--link);font-weight:600;text-decoration:underline}
   <section class="card">
     <h2 data-i="s3Title">3. Google Play Data Safety &amp; ML Kit Android SDK Disclosure</h2>
     <p data-i="s3P1">
-      While Longest Chariot LLC does not operate backend analytics or collect personal data, the bundled Google ML Kit Android SDK (com.google.mlkit:text-recognition-devanagari) automatically collects limited diagnostic and device telemetry encrypted in transit via HTTPS to maintain ML model reliability:
+      Longest Chariot LLC does not operate its own analytics servers. However, the bundled Google ML Kit Android SDK (com.google.mlkit:text-recognition-devanagari) automatically collects limited diagnostic and device telemetry, encrypted in transit via HTTPS, to maintain ML model reliability:
     </p>
     <div class="table-wrap">
       <table>
@@ -231,7 +231,24 @@ a{color:var(--link);font-weight:600;text-decoration:underline}
   </section>
 
   <section class="card">
-    <h2 data-i="s4Title">4. Local Storage, Data Retention, and Deletion Controls</h2>
+    <h2 data-i="adTitle">4. Advertising (Google AdMob)</h2>
+    <p data-i="adP1">
+      Lipi is free and supported by ads served through Google AdMob, a service of Google LLC. To deliver and measure ads, the Google Mobile Ads SDK collects the following information from your device and shares it with Google and its advertising partners:
+    </p>
+    <ul>
+      <li data-i="adL1">Device or other IDs: the Android Advertising ID (AAID) and app-set ID.</li>
+      <li data-i="adL2">Approximate location derived from your IP address.</li>
+      <li data-i="adL3">App interactions: ad impressions, ad taps, and general app usage events.</li>
+      <li data-i="adL4">Diagnostics: crash logs, performance data, device model, and OS version.</li>
+      <li data-i="adL5">Purposes: showing ads, ad measurement and analytics, fraud prevention and security, and — only where you have consented or where permitted by law — personalized advertising.</li>
+      <li data-i="adL6">Consent (EEA, UK, and Switzerland): where required, Lipi shows Google's consent message before personalized ads are served. You can change your choice at any time from the Privacy options entry in Lipi's Settings.</li>
+      <li data-i="adL7">Opting out: on Android, open Settings → Google → Ads (or Settings → Privacy → Ads) to delete or reset your Advertising ID, which stops personalized ads. You can also manage ad settings at adssettings.google.com.</li>
+      <li data-i="adL8">How Google uses this data: see policies.google.com/technologies/partner-sites. Longest Chariot LLC does not sell your personal information and does not receive your Advertising ID linked to your identity.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2 data-i="s4Title">5. Local Storage, Data Retention, and Deletion Controls</h2>
     <p data-i="s4P1">
       When "Auto-save to History" is enabled or when you tap "Save to History", Lipi stores the document thumbnail, extracted text, and translated text locally on your device inside your browser/WebView IndexedDB database (lipi_db) and stores your UI preferences (theme, language, default translation direction) in localStorage.
     </p>
@@ -243,14 +260,14 @@ a{color:var(--link);font-weight:600;text-decoration:underline}
   </section>
 
   <section class="card">
-    <h2 data-i="s5Title">5. Children's Privacy &amp; Policy Updates</h2>
+    <h2 data-i="s5Title">6. Children's Privacy &amp; Policy Updates</h2>
     <p data-i="s5P1">
-      Lipi does not require user registration and does not knowingly collect personal information from children under 13 (or the applicable age in your jurisdiction). If we update this Privacy Policy, we will post the revised version with an updated effective date on this page and inside the app.
+      Lipi is not directed at children under 13 (or the applicable age in your jurisdiction), does not require user registration, and does not knowingly collect personal information from children. Ads in Lipi are not intended for children. If we update this Privacy Policy, we will post the revised version with an updated effective date on this page and inside the app.
     </p>
   </section>
 
   <section class="card">
-    <h2 data-i="s6Title">6. Contact Us</h2>
+    <h2 data-i="s6Title">7. Contact Us</h2>
     <p data-i="s6P1">
       If you have questions about this Privacy Policy or data practices for Lipi – Scan &amp; Translate, please contact Longest Chariot LLC:
     </p>
@@ -276,34 +293,35 @@ var I18N={
     tSys:"System",tLight:"Light",tDark:"Dark",
     copyBtn:"Copy Policy Text",printBtn:"Print / PDF",copied:"Privacy Policy copied to clipboard",
     h1:"Privacy Policy",
-    effDate:"Effective Date: November 12, 2026",
+    effDate:"Effective Date: November 13, 2026",
     entity:"Developer: Longest Chariot LLC (Gilbert, Arizona, USA)",
-    intro:"Longest Chariot LLC (\"we\", \"our\", or \"us\") built the Lipi – Scan & Translate mobile and web application (Android package ID: com.longestchariot.lipi) as a privacy-first Devanagari and English document scanner and translator. This Privacy Policy explains how information is handled on your device and discloses third-party SDK telemetry required by Google Play's Data Safety section.",
+    intro:"Longest Chariot LLC (\"we\", \"our\", or \"us\") built the Lipi – Scan & Translate mobile and web application (Android package ID: com.longestchariot.lipi) as a Devanagari and English document scanner and translator. This Privacy Policy explains how information is handled on your device, what is sent to third-party services (translation providers, Google ML Kit, and Google AdMob advertising), and the choices you have.",
     b1Tag:"100% On-Device OCR",b1Title:"Photos Never Uploaded",b1Sub:"Camera images and PDFs are read locally on your phone via Google ML Kit Text Recognition v2.",
     b2Tag:"Local Storage Only",b2Title:"On-Device Scan History",b2Sub:"Saved scans stay in your device's local IndexedDB database and can be cleared anytime.",
-    b3Tag:"Zero Ad Tracking",b3Title:"No Data Sold or Shared",b3Sub:"No user accounts, no advertising IDs, and no third-party data sharing.",
+    b3Tag:"Ad-Supported",b3Title:"Ads by Google AdMob",b3Sub:"No user accounts. Ads are served by Google AdMob, which uses your Advertising ID. You can opt out of personalized ads anytime.",
     s1Title:"1. Camera, Photos, and Document Files (Processed On-Device Only)",
     s1P1:"Lipi requests access to your device camera (android.permission.CAMERA) and selected media/document files solely when you tap \"Take photo\" or \"Upload file\" to scan a document.",
     s1L1:"All optical character recognition (OCR) for Devanagari (Nepali) and Latin (English) scripts runs locally on your device using Google ML Kit Text Recognition v2 (or in-browser WebAssembly OCR when used in a web browser).",
     s1L2:"Your raw photos, camera frames, and PDF files are never uploaded to Longest Chariot LLC servers or shared with third parties.",
     s2Title:"2. Extracted Text & Translation Requests",
-    s2P1:"After text is extracted on your device, Lipi sends only the plain extracted text string over encrypted HTTPS (TLS) to an online translation service (Google Translate API endpoint or MyMemory Translation fallback) to return your Nepali or English translation in real time.",
+    s2P1:"After text is extracted on your device, Lipi sends only the plain extracted text string over encrypted HTTPS (TLS) to a third-party online translation service (Google Translate or the MyMemory translation fallback) to return your Nepali or English translation in real time. This text is shared with that translation provider and is processed under its own privacy policy.",
     s2L1:"Longest Chariot LLC does not log, store, or inspect the text you translate on any company server.",
     s2L2:"You can edit the extracted text on your screen prior to re-translating, and we recommend exercising caution before translating confidential personal, medical, or financial records.",
     s3Title:"3. Google Play Data Safety & ML Kit Android SDK Disclosure",
-    s3P1:"While Longest Chariot LLC does not operate backend analytics or collect personal data, the bundled Google ML Kit Android SDK (com.google.mlkit:text-recognition-devanagari) automatically collects limited diagnostic and device telemetry encrypted in transit via HTTPS to maintain ML model reliability:",
+    s3P1:"Longest Chariot LLC does not operate its own analytics servers. However, the bundled Google ML Kit Android SDK (com.google.mlkit:text-recognition-devanagari) automatically collects limited diagnostic and device telemetry, encrypted in transit via HTTPS, to maintain ML model reliability:",
     thType:"Data Category (Google Play Data Safety)",thDetail:"Specific Data Handled",thPurpose:"Handling & Purpose",
     td1Type:"Photos & Videos / Files",td1Det:"Camera captures, gallery images, and PDF pages selected by the user",td1Purp:"Processed strictly on-device. Not collected or transmitted off-device.",
     td2Type:"App Info & Performance (Diagnostics & Crash Logs)",td2Det:"OCR processing latency, image resolution configuration, feature version, event types, and error codes",td2Purp:"Collected automatically by Google ML Kit SDK over HTTPS for App Functionality and Analytics. Not shared with third parties.",
     td3Type:"Device or Other IDs",td3Det:"Per-installation identifiers (not uniquely tied to your identity), device model, and OS build",td3Purp:"Collected automatically by Google ML Kit SDK over HTTPS for SDK diagnostics and usage analytics. Not shared with third parties.",
-    s4Title:"4. Local Storage, Data Retention, and Deletion Controls",
+    adTitle:"4. Advertising (Google AdMob)",adP1:"Lipi is free and supported by ads served through Google AdMob, a service of Google LLC. To deliver and measure ads, the Google Mobile Ads SDK collects the following information from your device and shares it with Google and its advertising partners:",adL1:"Device or other IDs: the Android Advertising ID (AAID) and app-set ID.",adL2:"Approximate location derived from your IP address.",adL3:"App interactions: ad impressions, ad taps, and general app usage events.",adL4:"Diagnostics: crash logs, performance data, device model, and OS version.",adL5:"Purposes: showing ads, ad measurement and analytics, fraud prevention and security, and — only where you have consented or where permitted by law — personalized advertising.",adL6:"Consent (EEA, UK, and Switzerland): where required, Lipi shows Google's consent message before personalized ads are served. You can change your choice at any time from the Privacy options entry in Lipi's Settings.",adL7:"Opting out: on Android, open Settings → Google → Ads (or Settings → Privacy → Ads) to delete or reset your Advertising ID, which stops personalized ads. You can also manage ad settings at adssettings.google.com.",adL8:"How Google uses this data: see policies.google.com/technologies/partner-sites. Longest Chariot LLC does not sell your personal information and does not receive your Advertising ID linked to your identity.",
+    s4Title:"5. Local Storage, Data Retention, and Deletion Controls",
     s4P1:"When \"Auto-save to History\" is enabled or when you tap \"Save to History\", Lipi stores the document thumbnail, extracted text, and translated text locally on your device inside your browser/WebView IndexedDB database (lipi_db) and stores your UI preferences (theme, language, default translation direction) in localStorage.",
     s4L1:"Delete Single Scan: Open the History tab and tap the \"×\" button next to any saved item to delete it immediately from your device.",
     s4L2:"Delete All History: Open the Settings tab, tap \"Delete\" next to Clear History, and confirm in the slide-up sheet to wipe all IndexedDB records permanently.",
     s4L3:"Uninstalling the Lipi Android app also removes all local IndexedDB and WebView storage from your device.",
-    s5Title:"5. Children's Privacy & Policy Updates",
-    s5P1:"Lipi does not require user registration and does not knowingly collect personal information from children under 13 (or the applicable age in your jurisdiction). If we update this Privacy Policy, we will post the revised version with an updated effective date on this page and inside the app.",
-    s6Title:"6. Contact Us",
+    s5Title:"6. Children's Privacy & Policy Updates",
+    s5P1:"Lipi is not directed at children under 13 (or the applicable age in your jurisdiction), does not require user registration, and does not knowingly collect personal information from children. Ads in Lipi are not intended for children. If we update this Privacy Policy, we will post the revised version with an updated effective date on this page and inside the app.",
+    s6Title:"7. Contact Us",
     s6P1:"If you have questions about this Privacy Policy or data practices for Lipi – Scan & Translate, please contact Longest Chariot LLC:",
     cOrgLbl:"Company:",cEmailLbl:"Support & Privacy Email:",cWebLbl:"Website:"
   },
@@ -313,34 +331,35 @@ var I18N={
     tSys:"प्रणाली",tLight:"उज्यालो",tDark:"अँध्यारो",
     copyBtn:"नीति प्रतिलिपि गर्नुहोस्",printBtn:"प्रिन्ट / PDF",copied:"गोपनीयता नीति प्रतिलिपि गरियो",
     h1:"गोपनीयता नीति (Privacy Policy)",
-    effDate:"लागू मिति: नोभेम्बर १२, २०२६",
+    effDate:"लागू मिति: नोभेम्बर १३, २०२६",
     entity:"निर्माता: Longest Chariot LLC (गिल्बर्ट, एरिजोना, अमेरिका)",
-    intro:"Longest Chariot LLC ले देवनागरी (नेपाली) र अंग्रेजी कागजातहरू स्क्यान तथा अनुवाद गर्नका लागि 'Lipi – Scan & Translate' (Android प्याकेज: com.longestchariot.lipi) निर्माण गरेको हो। यो गोपनीयता नीतिले तपाईंको उपकरणमा डाटा कसरी सुरक्षित रहन्छ र Google Play Data Safety अन्तर्गतका विवरणहरू स्पष्ट पार्छ।",
+    intro:"Longest Chariot LLC ले देवनागरी (नेपाली) र अंग्रेजी कागजातहरू स्क्यान तथा अनुवाद गर्नका लागि 'Lipi – Scan & Translate' (Android प्याकेज: com.longestchariot.lipi) निर्माण गरेको हो। यो गोपनीयता नीतिले तपाईंको उपकरणमा डाटा कसरी राखिन्छ, तेस्रो पक्ष सेवाहरू (अनुवाद सेवा, Google ML Kit र Google AdMob विज्ञापन) मा के पठाइन्छ, र तपाईंसँग के विकल्पहरू छन् भन्ने स्पष्ट पार्छ।",
     b1Tag:"१००% अन-डिभाइस OCR",b1Title:"तस्बिर कतै अपलोड हुँदैन",b1Sub:"क्यामेराका फोटो र PDF हरू Google ML Kit v2 मार्फत तपाईंको फोनमै अफलाइन पढिन्छन्।",
     b2Tag:"स्थानीय भण्डारण मात्र",b2Title:"उपकरणमै सुरक्षित इतिहास",b2Sub:"सुरक्षित गरिएका स्क्यानहरू तपाईंको फोनको IndexedDB मा मात्र रहन्छन् र जहिले पनि मेटाउन सकिन्छ।",
-    b3Tag:"विज्ञापन ट्र्याकिङ छैन",b3Title:"डाटा बिक्री वा सेयर हुँदैन",b3Sub:"कुनै खाता आवश्यक पर्दैन र तेस्रो पक्षलाई डाटा बेचिने वा बाँडिने गरिँदैन।",
+    b3Tag:"विज्ञापन-समर्थित",b3Title:"Google AdMob विज्ञापन",b3Sub:"कुनै खाता आवश्यक पर्दैन। विज्ञापनहरू Google AdMob मार्फत देखाइन्छन्, जसले तपाईंको Advertising ID प्रयोग गर्छ। व्यक्तिगत विज्ञापन जहिले पनि बन्द गर्न सकिन्छ।",
     s1Title:"१. क्यामेरा, तस्बिर र कागजात फाइलहरू (उपकरणमै मात्र प्रशोधन)",
     s1P1:"तपाईंले 'फोटो खिच्नुहोस्' वा 'फाइल अपलोड गर्नुहोस्' थिच्दा मात्र Lipi ले क्यामेरा (android.permission.CAMERA) र फाइल छनोटको अनुमति माग्छ।",
     s1L1:"देवनागरी र अंग्रेजी अक्षर पहिचान (OCR) पूर्ण रूपमा तपाईंको फोनभित्रै Google ML Kit Text Recognition v2 मार्फत सम्पन्न हुन्छ।",
     s1L2:"तपाईंको मूल फोटो वा PDF फाइल Longest Chariot LLC वा अन्य कुनै बाह्य सर्भरमा कहिल्यै अपलोड हुँदैन।",
     s2Title:"२. निकालिएको पाठ र अनुवाद सेवा",
-    s2P1:"तस्बिरबाट पाठ निकालिसकेपछि, अनुवादका लागि उक्त सादा पाठ (text) मात्र सुरक्षित HTTPS (TLS) मार्फत अनलाइन अनुवाद सेवा (Google Translate वा MyMemory) मा पठाइन्छ।",
+    s2P1:"तस्बिरबाट पाठ निकालिसकेपछि, अनुवादका लागि उक्त सादा पाठ (text) मात्र सुरक्षित HTTPS (TLS) मार्फत तेस्रो पक्षको अनलाइन अनुवाद सेवा (Google Translate वा MyMemory) मा पठाइन्छ। यो पाठ उक्त अनुवाद सेवासँग साझा हुन्छ र त्यसको आफ्नै गोपनीयता नीति अनुसार प्रशोधन हुन्छ।",
     s2L1:"Longest Chariot LLC ले तपाईंले अनुवाद गर्नुभएको पाठ आफ्नो कुनै सर्भरमा संकलन वा भण्डारण गर्दैन।",
     s2L2:"अति संवेदनशील व्यक्तिगत, स्वास्थ्य वा वित्तीय कागजातहरू अनुवाद गर्नुअघि ध्यान दिन अनुरोध गरिन्छ।",
     s3Title:"३. Google Play Data Safety र ML Kit SDK विवरण",
-    s3P1:"Longest Chariot LLC ले कुनै व्यक्तिगत डाटा संकलन नगरे तापनि, एपमा प्रयोग भएको Google ML Kit Android SDK (com.google.mlkit:text-recognition-devanagari) ले सेवाको गुणस्तर र प्राविधिक परीक्षणका लागि निम्न सीमित प्राविधिक विवरण HTTPS मार्फत संकलन गर्छ:",
+    s3P1:"Longest Chariot LLC ले आफ्नो कुनै एनालिटिक्स सर्भर सञ्चालन गर्दैन। तर, एपमा प्रयोग भएको Google ML Kit Android SDK (com.google.mlkit:text-recognition-devanagari) ले सेवाको गुणस्तर र प्राविधिक परीक्षणका लागि निम्न सीमित प्राविधिक विवरण HTTPS मार्फत संकलन गर्छ:",
     thType:"डाटा प्रकार (Google Play Data Safety)",thDetail:"विवरण",thPurpose:"प्रयोग र उद्देश्य",
     td1Type:"फोटो र फाइलहरू (Photos & Files)",td1Det:"प्रयोगकर्ताले छानेका फोटो र PDF पृष्ठहरू",td1Purp:"उपकरणभित्रै मात्र प्रशोधन गरिन्छ। बाहिर पठाइँदैन वा संकलन गरिँदैन।",
     td2Type:"एप कार्यसम्पादन र डाइग्नोस्टिक्स (Diagnostics)",td2Det:"OCR गति, तस्बिर रिजोल्युसन कन्फिगरेसन, फिचर संस्करण र त्रुटि कोडहरू",td2Purp:"Google ML Kit SDK द्वारा एप कार्यक्षमता र प्राविधिक विश्लेषणका लागि HTTPS मार्फत संकलन गरिन्छ। तेस्रो पक्षलाई बाँडिँदैन।",
     td3Type:"उपकरण वा इन्स्टलेसन पहिचान (Device/Installation IDs)",td3Det:"व्यक्तिगत पहिचान नखुल्ने प्रति-इन्स्टलेसन आइडी र उपकरण मोडेल",td3Purp:"Google ML Kit SDK द्वारा प्राविधिक विश्लेषणका लागि संकलन गरिन्छ। तेस्रो पक्षलाई बाँडिँदैन।",
-    s4Title:"४. स्थानीय भण्डारण र डाटा मेटाउने तरिका",
+    adTitle:"४. विज्ञापन (Google AdMob)",adP1:"Lipi निःशुल्क छ र Google LLC को सेवा Google AdMob मार्फत देखाइने विज्ञापनबाट सञ्चालित छ। विज्ञापन देखाउन र मापन गर्न Google Mobile Ads SDK ले तपाईंको उपकरणबाट निम्न जानकारी संकलन गरी Google र यसका विज्ञापन साझेदारहरूसँग साझा गर्छ:",adL1:"उपकरण पहिचान: Android Advertising ID (AAID) र app-set ID।",adL2:"IP ठेगानाबाट अनुमान गरिएको अनुमानित स्थान।",adL3:"एप अन्तरक्रिया: विज्ञापन देखिएको, थिचिएको र सामान्य एप प्रयोग विवरण।",adL4:"डाइग्नोस्टिक्स: क्र्यास लग, कार्यसम्पादन डाटा, उपकरण मोडेल र OS संस्करण।",adL5:"उद्देश्य: विज्ञापन देखाउने, विज्ञापन मापन तथा विश्लेषण, ठगी रोकथाम तथा सुरक्षा, र तपाईंको सहमति भएमा वा कानुनले अनुमति दिएमा मात्र व्यक्तिगत विज्ञापन।",adL6:"सहमति (EEA, UK र स्विट्जरल्याण्ड): आवश्यक परेमा, व्यक्तिगत विज्ञापन देखाउनुअघि Lipi ले Google को सहमति सन्देश देखाउँछ। तपाईं Lipi को सेटिङभित्रको 'Privacy options' बाट जहिले पनि आफ्नो रोजाइ परिवर्तन गर्न सक्नुहुन्छ।",adL7:"बन्द गर्ने तरिका: Android मा Settings → Google → Ads (वा Settings → Privacy → Ads) मा गई Advertising ID मेटाउनुहोस् वा रिसेट गर्नुहोस्, जसले व्यक्तिगत विज्ञापन रोक्छ। adssettings.google.com बाट पनि विज्ञापन सेटिङ मिलाउन सकिन्छ।",adL8:"Google ले यो डाटा कसरी प्रयोग गर्छ: policies.google.com/technologies/partner-sites हेर्नुहोस्। Longest Chariot LLC ले तपाईंको व्यक्तिगत जानकारी बेच्दैन।",
+    s4Title:"५. स्थानीय भण्डारण र डाटा मेटाउने तरिका",
     s4P1:"तपाईंको स्क्यान इतिहास तपाईंको उपकरणको IndexedDB (lipi_db) मा मात्र सुरक्षित रहन्छ र सेटिङहरू localStorage मा रहन्छन्।",
     s4L1:"एकल स्क्यान मेटाउन: 'इतिहास' (History) ट्याबमा गई जुनसुकै नतिजाको छेउमा रहेको '×' बटन थिच्नुहोस्।",
     s4L2:"सबै इतिहास मेटाउन: 'सेटिङ' (Settings) ट्याबमा गई 'इतिहास मेटाउनुहोस्' थिचेर पुष्टि गर्नुहोस्।",
     s4L3:"एप अनइन्स्टल गर्दा पनि उपकरणमा रहेका सबै IndexedDB रेकर्डहरू स्वतः हट्छन्।",
-    s5Title:"५. बालबालिकाको गोपनीयता र नीति परिमार्जन",
-    s5P1:"Lipi मा कुनै प्रयोगकर्ता खाता खोल्नु पर्दैन र १३ वर्षभन्दा मुनिका बालबालिकाबाट कुनै व्यक्तिगत विवरण संकलन गरिँदैन। नीतिमा कुनै परिवर्तन भएमा यही पृष्ठ र एपमा अद्यावधिक गरिनेछ।",
-    s6Title:"६. सम्पर्क विवरण",
+    s5Title:"६. बालबालिकाको गोपनीयता र नीति परिमार्जन",
+    s5P1:"Lipi १३ वर्षमुनिका बालबालिकाका लागि बनाइएको होइन, कुनै खाता आवश्यक पर्दैन, र बालबालिकाबाट जानीजानी कुनै व्यक्तिगत विवरण संकलन गरिँदैन। Lipi का विज्ञापनहरू बालबालिकाका लागि लक्षित छैनन्। नीतिमा कुनै परिवर्तन भएमा यही पृष्ठ र एपमा अद्यावधिक गरिनेछ।",
+    s6Title:"७. सम्पर्क विवरण",
     s6P1:"यस गोपनीयता नीति सम्बन्धी कुनै जिज्ञासा भएमा Longest Chariot LLC लाई सम्पर्क गर्नुहोस्:",
     cOrgLbl:"कम्पनी:",cEmailLbl:"इमेल:",cWebLbl:"वेबसाइट:"
   }
